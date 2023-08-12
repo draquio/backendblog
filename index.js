@@ -8,7 +8,6 @@ const {
   API_Version,
 } = require("./constants");
 
-// mongoose.connect(`mongodb+srv://${DB_User}:${DB_Password}@${DB_Host}/`);
 const PORT = process.env.port || 3977;
 const dbName = 'test';
 const uri = `mongodb+srv://${DB_User}:${DB_Password}@${DB_Host}/test`;
@@ -28,18 +27,3 @@ try {
   console.error('Error al conectar a MongoDB:', error);
     throw error;
 }
-
-
-  // mongoose.connect(`mongodb+srv://${DB_User}:${DB_Password}@${DB_Host}/`)
-  // .then(() => {
-  //   app.listen(PORT, () => {
-  //     console.log("##################");
-  //     console.log("#### API REST ####");
-  //     console.log("##################");
-  //     console.log(`http://${IP_Server}:${PORT}/api/${API_Version}`);
-  //   });
-  // })
-  // .catch((e) => {
-  //   console.log("No se pudo conectar");
-  //   console.log(e);
-  // });
